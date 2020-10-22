@@ -19,18 +19,18 @@ For a GUI, Bob does not need much, but he must be able to see an overview of the
 ## Tasks:
 These objectives are mandatory:
 
-- New user registration should be disabled. 
-- Implement database user seed with email test@example.com (for testing purpose).
-- If the user isn't logged in, all URLs should redirect to the login page.
-- Verify project names are unique and display error when submitting existing name.
-- Calculate total time (hours, minutes, seconds) spend on project and display in the overview.
-- Add functionality to support adding entries to projects.
-- Make auth middleware global, instead of in constructors of controllers.
-- It should be possible to delete entries and projects.
-- Readme file of how to boostrap (setup) your solution, so we can run it on our computer.
+1. New user registration should be disabled. 
+2. Implement database user seed with email:test@example.com, password:secret (for testing purpose).
+3. If the user isn't logged in, all URLs should redirect to the login page.
+4. Verify project names are unique and display error when submitting existing name.
+5. Calculate total time (hours, minutes, seconds) spend on project and display in the overview.
+6. Add functionality to support adding entries to projects.
+7. Make auth middleware global, instead of in constructors of controllers.
+8. It should be possible to delete entries and projects.
+9. Readme file of how to boostrap (setup) your solution, so we can run it on our computer.
 
 ## Bonus:
 These objectives are optional:
-- Add tests to prove functionality.
-- Improve existing code, if anything sticks out to you.
-- When adding or updating a project, make the project overview automatically update.
+10. When adding or updating a project, make the project overview automatically update.
+11. Add unit tests to prove functionality.
+12. Set Up Laravel, Nginx, and MySQL with Docker Compose for your solution.
