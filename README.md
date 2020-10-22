@@ -31,6 +31,7 @@ These objectives are mandatory:
 
 ## Bonus:
 These objectives are optional:
+
 10. When adding or updating a project, make the project overview automatically update.
 11. Add unit tests to prove functionality.
 12. Set Up Laravel, Nginx, and MySQL with Docker Compose for your solution.
