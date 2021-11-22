@@ -1,7 +1,7 @@
 # Bonnier Publications Coding Challenge
 This repository contains a [Laravel](https://laravel.com/docs/7.x) and [VueJS](https://vuejs.org/) starter application, that doesn't quite work.
 
-There are specified some tasks below, which needs to be solved to complete this coding challenge.
+There are specified tasks below, which needs to be solved to complete this coding challenge.
 
 1. Don't fork the repository, please download/clone the source code instead.
 2. Create a github public repository and push your solution to the repository master branch.
@@ -22,12 +22,12 @@ These objectives are mandatory:
 1. New user registration should be disabled. 
 2. Implement database user seed with email:test@example.com, password:secret (for testing purpose).
 3. If the user isn't logged in, all URLs should redirect to the login page.
-4. Verify project names are unique and display error when submitting existing name.
-5. Calculate total time (hours, minutes, seconds) spend on project and display in the overview.
+4. Verify project name are unique and display error when submitting existing name.
+5. Calculate total time (hours, minutes, seconds format) spent on a project and display it in the overview.
 6. Add functionality to support adding entries to projects.
 7. Make auth middleware global, instead of in constructors of controllers.
 8. It should be possible to delete entries and projects.
-9. Readme file of how to boostrap (setup) your solution, so we can run it on our computer.
+9. Readme file of how to bootstrap (setup) your solution, so we can run it on our computer.
 
 ## Bonus:
 These objectives are optional:
