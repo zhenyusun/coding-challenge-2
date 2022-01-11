@@ -32,5 +32,6 @@ These objectives are mandatory:
 
 ## Bonus:
 These objectives are optional:
+
 11. Add unit tests to prove functionality.
 12. Set Up Laravel, Nginx, and MySQL with Docker Compose for your solution.
