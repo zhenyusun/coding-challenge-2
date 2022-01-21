@@ -20,9 +20,14 @@ class ProjectController extends Controller
 
     public function add(Request $request)
     {
-        Project::create([
+        $project = Project::firstOrCreate([
             'name' => $request->get('name')
         ]);
+
+        if($project->wasRecentlyCreated === false) {
+            return response()->json(['status' => 'Project with same name already exits']);
+        }
+
         return response()->json(['status' => 'success']);
     }
 
@@ -30,7 +35,12 @@ class ProjectController extends Controller
     {
         $project = Project::find($request->get('id'));
         $project->name = $request->get('name');
-        $project->save();
+
+        if($project->where('name',$project->name)->count() === 0){
+            $project->save();
+        }else{
+            return response()->json(['status' => 'Project with same name already exits']);
+        }
         return response()->json(['status' => 'success']);
     }
 }
