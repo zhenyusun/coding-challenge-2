@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::get('/projects/{id}', 'ProjectController@show');
-Route::post('/projects/add', 'ProjectController@add');
-Route::post('/projects/update', 'ProjectController@update');
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('/projects/{id}', 'ProjectController@show');
+    Route::post('/projects/add', 'ProjectController@add');
+    Route::post('/projects/update', 'ProjectController@update');
+});
