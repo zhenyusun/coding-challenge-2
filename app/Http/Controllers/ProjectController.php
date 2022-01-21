@@ -20,9 +20,14 @@ class ProjectController extends Controller
 
     public function add(Request $request)
     {
-        Project::create([
+        $project = Project::firstOrCreate([
             'name' => $request->get('name')
         ]);
+
+        if($project->wasRecentlyCreated === false) {
+            return response()->json(['status' => 'Project with same name already exits']);
+        }
+
         return response()->json(['status' => 'success']);
     }
 
